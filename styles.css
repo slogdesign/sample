@@ -102,22 +102,22 @@ header {
 }
 
 .red {
-  width: 100px;
-  height: 89px;
+  width: 120px;
+  height: 80px;
   background-image: url('https://www.pngall.com/wp-content/uploads/6/Gem-PNG-File.png');
   transform: translate(-70%, -190%) rotate(30deg);
 }
 
 .orange {
-  width: 100px;
-  height: 150px;
+  width: 97px;
+  height: 120px;
   background-image: url('https://www.pngall.com/wp-content/uploads/2017/01/Emerald-Stone-PNG-Images.png');
   transform: translate(218%, 24%) rotate(-20deg); /* Adjusted translation for orange gem */
 }
 
 .pink {
-  width: 80px;
-  height: 70px;
+  width: 70px;
+  height: 60px;
   background-image: url('https://www.pngall.com/wp-content/uploads/6/Gem-PNG-Clipart.png');
   transform: translate(-150%, 150%); /* Adjusted translation for pink gem */
   background-size: contain;
