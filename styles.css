@@ -40,9 +40,11 @@ img {
 .bx {
   font-size: 2.5rem;
 }
-body{
+
+body {
   background-color: var(--primary-color);
 }
+
 /* Header Styles */
 header {
   display: flex-end;
@@ -81,7 +83,7 @@ header {
   padding: 2rem 5rem 0 5rem; /* Adjusted padding values */
 }
 
-/*Gem Container Styles*/
+/* Gem Container Styles */
 .gem-container {
   position: absolute;
   top: 80%;
@@ -92,29 +94,34 @@ header {
 }
 
 .gem {
-  width: 100px;
-  height: 70px;
   cursor: pointer;
   position: absolute;
   z-index: 3;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat; /* Prevent gem repetition */
 }
 
 .red {
-  background-image: url('/Users/luna/Sample/assets/images/redgem.png'); /* Updated URL for red gem */
-  transform: translate(-50%, -200%); /* Move the red gem up */
+  width: 100px;
+  height: 89px;
+  background-image: url('/Users/luna/Sample/assets/images/redgem.png');
+  transform: translate(-70%, -190%) rotate(30deg);
 }
 
 .orange {
-  background-image: url('/Users/luna/Sample/assets/images/orangegem.png'); /* Updated URL for orange gem */
-  transform: translate(200%, -50%); /* Move the orange gem right */
+  width: 100px;
+  height: 150px;
+  background-image: url('/Users/luna/Sample/assets/images/orangegem.png');
+  transform: translate(218%, 24%) rotate(-20deg); /* Adjusted translation for orange gem */
 }
 
 .pink {
-  background-image: url('/Users/luna/Sample/assets/images/pinkgem.png'); /* Updated URL for pink gem */
-  transform: translate(-150%, 150%); /* Move the pink gem down and left */
+  width: 80px;
+  height: 70px;
+  background-image: url('/Users/luna/Sample/assets/images/pinkgem.png');
+  transform: translate(-150%, 150%); /* Adjusted translation for pink gem */
+  background-size: contain;
 }
-
 
 /* Slogan Styles */
 .slogan {
@@ -253,7 +260,7 @@ header {
   .hide-bx {
     display: none;
   }
-  
+
   .slogan {
     font-size: 6vw;
   }
