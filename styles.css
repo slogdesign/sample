@@ -1,5 +1,6 @@
 /* Importing Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
 /* Resetting Styles */
 *,
@@ -33,63 +34,26 @@ a {
 
 img {
   width: 100%;
-  height: auto;
+  height: 75%;
 }
 
 .bx {
   font-size: 2.5rem;
 }
 
-.container {
-  padding: 0 2rem;
-}
-
-/* Body Styles */
-
 /* Header Styles */
 header {
-  display: flex;
+  display: flex-end;
   align-items: center;
-  justify-content: space-between; /* Changed from padding */
+  justify-content: space-between;
+  padding: 1rem 5rem;
   background-color: var(--primary-color);
-  padding: 1rem 2rem; /* Added padding */
 }
 
 .nav-items {
   display: flex;
   align-items: center;
-  margin-right: auto; /* Added this line */
-}
-
-.nav-item {
-  margin: 0 2rem;
-  font-family: "Syne", sans-serif;
-  font-style: normal;
-}
-
-.nav-link {
-  font-size: 1.1rem;
-  letter-spacing: 0.05rem;
-  position: relative;
-  color: var(--white-color);
-}
-
-.nav-link::before {
-  content: "";
-  background: linear-gradient(var(--primary-color), var(--primary-color-alt));
-  width: 100%;
-  height: 0.05rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 150ms;
-}
-
-.nav-link:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  justify-content: flex-end; /* Change to flex-end */
 }
 
 .menu-toggle {
@@ -102,7 +66,6 @@ header {
   background: -webkit-linear-gradient(120deg, var(--white-color), var(--white-color-alt));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: none !important;
 }
 
 /* Main Styles */
@@ -112,11 +75,9 @@ header {
   background-color: var(--primary-color);
   display: grid;
   position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 1rem 1rem; /* Adjusted padding */
+  min-height: 70vh;
+  padding: 2rem 5rem 0 5rem; /* Adjusted padding values */
 }
-
 
 /* Slogan Styles */
 .slogan {
@@ -127,7 +88,7 @@ header {
   z-index: 1;
   text-align: center;
   color: var(--white-color);
-  font-size: 90vw;
+  font-size: 9vw;
   max-width: 100%;
   font-family: "Syne", sans-serif;
   font-style: normal;
@@ -138,11 +99,12 @@ header {
   position: relative;
   overflow: hidden;
   min-height: 400px;
+  z-index: 2; /* Move the home image container above the slogan */
 }
 
 .home-img {
-  width: 100%;
-  height: 75%;
+  width: 35%;
+  height: 70%;
   position: relative;
   z-index: 2;
 }
@@ -157,6 +119,47 @@ header {
   transform: rotateY(180deg);
 }
 
+/* Navigation Styles */
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Change to flex-end */
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+}
+
+.nav-link::before {
+  content: "";
+  background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+  width: 100%;
+  height: 0.05rem;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Social Media Icons */
+.social-icon {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: transform 200ms;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .container {
@@ -165,17 +168,18 @@ header {
 
   header {
     padding: 0.5rem 1rem;
+    flex-direction: column;
   }
 
   .navbar {
     background-color: var(--dark-color);
     position: absolute;
     top: 3.5rem;
-    right: 0;
+    right: 0; /* Change to right: 1rem; or any desired value */
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 500ms;
@@ -191,6 +195,7 @@ header {
   .nav-items {
     display: flex;
     flex-direction: column;
+    align-items: flex-end; /* Add this line to align items to the right */
   }
 
   .nav-item {
@@ -202,30 +207,18 @@ header {
   }
 
   .bx-menu {
-    display: block !important;
+    display: block;
   }
 
   .show-bx {
-    display: block !important;
+    display: block;
   }
 
   .hide-bx {
-    display: none !important;
+    display: none;
   }
-}
-
-@media (min-width: 769px) {
-  header {
-    padding: 1rem 5rem;
-  }
-
-  .section-1 {
-    justify-content: space-between;
-    grid-template-columns: 1fr 1fr;
-    padding: 10rem 5rem 0 5rem;
-  }
-
+  
   .slogan {
-    font-size: 4rem;
+    font-size: 6vw;
   }
 }
