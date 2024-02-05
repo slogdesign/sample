@@ -69,7 +69,9 @@ header {
 }
 
 /* Main Styles */
-
+body{
+  background-color: var(--primary-color); 
+}
 /* Home Section Styles */
 .section-1 {
   background-color: var(--primary-color);
