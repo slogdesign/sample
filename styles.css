@@ -112,7 +112,7 @@ header {
   width: 97px;
   height: 120px;
   background-image: url('https://www.pngall.com/wp-content/uploads/2017/01/Emerald-Stone-PNG-Images.png');
-  transform: translate(218%, 24%) rotate(-20deg); /* Adjusted translation for orange gem */
+  transform: translate(230%, 24%) rotate(-20deg); /* Adjusted translation for orange gem */
 }
 
 .pink {
